@@ -1,0 +1,146 @@
+.cupcake {
+    width: 50%;
+    display: inline-block;
+    margin: 0 auto; 
+    transition: transform 0.2s ease;
+}
+.cupcake:active {
+    transform: scale(1.1);
+}
+.cupcakeDiv {
+    background: transparent;
+    display: block;
+    animation: wobble 7s ease-in-out infinite;
+}
+.cupcakeGroup {
+    position: absolute;
+    right: 43%;
+    top: 10%;
+    display: block;
+    text-align: center;
+}
+@keyframes wobble {
+    from { transform: rotate(-5deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(3deg); }
+    to { transform: rotate(-5deg); }
+}
+@keyframes scale {
+    from { transform: scale(1)}
+     to { transform: scale(5); }
+}
+body {
+    background-color: #dfd375;
+    overflow: hidden;
+}
+.cakeText {
+    color: #a07b62;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-top: -10px;
+    font-family:'Patrick Hand';
+    text-align: center;
+    display: inline-block;
+}
+.powerText {
+    color: #a07b62;
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: -40px;
+    font-family:'Patrick Hand';
+    text-align: center;
+    display: block;
+}
+.workerText {
+    color: #a07b62;
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: -25px;
+    font-family:'Patrick Hand';
+    text-align: center;
+    display: block;
+}
+.upgradeButton {
+    width: 400px;
+    height: 125px;
+    font-family: 'Patrick Hand';
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #FFB2E6;
+    color: #D972FF;
+    font-size: 20px;
+    border: 3px #80E1ED solid;
+    display: block;
+    margin: 10px;
+}
+.upgrades {
+    height: 100vh;
+    background: rgba(255,178,230, .5);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+}
+.buttonTitle {
+    font-size: 30px;
+    margin: -10px;
+}
+.buttonCost {
+    font-size: 18px;
+    margin: -10px;
+}
+.homeLayout {
+    width: 100%;
+    height: 100vh;
+}
+.mult-bar {
+    background-color: #D972FF;
+    width: 20px;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+}
+.progress-bar {
+    background-color: #80E1ED;
+    width: 20px;
+    height: 0%;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+}
+.progress-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: #D972FF;
+    position: absolute;
+    z-index: 2;
+    top: .85%;
+}
+.bar-layout{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+.settings {
+    position: absolute;
+    inset: 0px;
+    width: 12rem;
+    height: 5rem;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto;
+    z-index: 999;
+}
+.golden-cupcake {
+    display: block;
+    z-index: 999;
+    position: absolute;
+    animation: float 5s ease-in-out forwards;
+}
+
+@keyframes float {
+    from { left: 0; }
+    to { left: 100%; }
+}
